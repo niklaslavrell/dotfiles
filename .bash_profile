@@ -6,7 +6,7 @@ done
 unset file
 
 # init z   https://github.com/rupa/z
-. ~/code/z/z.sh
+. ~/Developer/z/z.sh
 
 # bash completion.
 if [ -f `brew --prefix`/etc/bash_completion ]; then
