@@ -1,13 +1,20 @@
 # dotfiles
 
-Forked from [paulirish](https://github.com/paulirish/dotfiles), big thanks!
+Forked from [paulirish](https://github.com/paulirish/dotfiles) and [mathiasbynens](https://github.com/mathiasbynens/dotfiles), big thanks!
 
-## Syntax highlighting
+## Installation
 
-…is really important. even for these files.
+### Using Git and the bootstrap script
 
-Install [Dotfiles Syntax Highlighting](https://github.com/mattbanks/dotfiles-syntax-highlighting-st2) via [Sublime Text 2 Package Control](http://wbond.net/sublime_packages/package_control)
+```bash
+git clone https://github.com/lalle/dotfiles.git && cd dotfiles && source bootstrap.sh
+```
 
+To update, `cd` into your local `dotfiles` repository and then:
+
+```bash
+source bootstrap.sh
+```
 
 ### Sensible OS X defaults
 
@@ -17,35 +24,16 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 ./.osx
 ```
 
-## overview of files
+### Install Homebrew formulae
 
-####  Automatic config
-* ...
-
-#### shell environment
-* `.aliases`
-* `.bash_profile`
-* `.bash_prompt`
-* `.bashrc`
-* `.functions`
-
-#### manual run
-* `.osx` - run on a fresh osx machine
-* `.brew` - homebrew initialization
-
-#### git, brah
-* `.git`
-* `.gitattributes`
-* `.gitconfig`
-* `.gitignore`
-
-* `.inputrc` - config for bash readline
-
-
-## Installation
+When setting up a new Mac, you may want to install some common [Homebrew](http://brew.sh/) formulae:
 
 ```bash
-git clone https://github.com/lalle/dotfiles.git && cd dotfiles && ./sync.sh
+./brew.sh
 ```
 
-To update later on, just run the sync again.
+## Syntax highlighting
+
+…is really important. even for these files.
+
+Install [Dotfiles Syntax Highlighting](https://github.com/mattbanks/dotfiles-syntax-highlighting-st2) via [Sublime Text 2 Package Control](http://wbond.net/sublime_packages/package_control)
