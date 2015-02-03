@@ -92,6 +92,13 @@ brew install git
 # installation method.
 brew install node
 
+brew install python
+brew install composer
+brew install gradle
+
+npm install bower -g
+npm install jshint -g
+
 #brew install homebrew/versions/lua52
 
 # Remove outdated versions from the cellar.

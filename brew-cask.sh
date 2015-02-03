@@ -1,5 +1,14 @@
+brew update
+
 # Install HomeBrew Cask
 brew install caskroom/cask/brew-cask
+
+brew upgrade brew-cask
+
+#brew cask install java
+#brew cask install macdown
+#brew cask install google-hangouts
+#brew cask install alfred
 
 #brew cask install google-chrome
 #brew cask install firefox
