@@ -1,14 +1,28 @@
-# Compiled Python files
-*.pyc
+#
+# Global .gitignore settings
+#
 
-# Folder view configuration files
+# OSX
+## Folder view configuration files
 .DS_Store
 Desktop.ini
+.AppleDouble
+.LSOverride
 
-# Thumbnail cache files
+## Thumbnail cache files
 ._*
 Thumbs.db
 
-# Files that might appear on external disks
+## Files that might appear on external disks
 .Spotlight-V100
 .Trashes
+
+## Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Compiled Python files
+*.pyc

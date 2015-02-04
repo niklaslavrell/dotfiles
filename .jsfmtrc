@@ -1,8 +1,6 @@
 {
 
-
   "// docs, basically" : "https://github.com/paulirish/sublime-jsfmt#formatting-rules",
-
 
   "preset": "jquery",
   "plugins": [

@@ -1,20 +1,21 @@
+#
+# Similar to aliases, except functions can take arguments
+#
+
 # Create a new directory and enter it
-function md() {
+function mkd() {
 	mkdir -p "$@" && cd "$@"
 }
-
 
 # find shorthand
 function f() {
     find . -name "$1"
 }
 
-
 # cd into whatever is the forefront Finder window.
 cdf() {  # short for cdfinder
   cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
 }
-
 
 # Start an HTTP server from a directory, optionally specifying the port
 function server() {
@@ -38,17 +39,9 @@ AWK
   )" | less -F
 }
 
-
 # Copy w/ progress
 cp_p () {
   rsync -WavP --human-readable --progress $1 $2
-}
-
-
-# Test if HTTP compression (RFC 2616 + SDCH) is enabled for a given URL.
-# Send a fake UA string for sites that sniff it instead of using the Accept-Encoding header. (Looking at you, ajax.googleapis.com!)
-function httpcompression() {
-	encoding="$(curl -LIs -H 'User-Agent: Mozilla/5 Gecko' -H 'Accept-Encoding: gzip,deflate,compress,sdch' "$1" | grep '^Content-Encoding:')" && echo "$1 is encoded using ${encoding#* }" || echo "$1 is not using any encoding"
 }
 
 # Syntax-highlight JSON strings or files
@@ -62,13 +55,11 @@ function json() {
 	fi
 }
 
-
 # take this repo and copy it to somewhere else minus the .git stuff.
 function gitexport(){
 	mkdir -p "$1"
 	git archive master | tar -x -C "$1"
 }
-
 
 # animated gifs from any video
 # from alex sexton   gist.github.com/SlexAxton/4989674
@@ -87,6 +78,7 @@ gifify() {
 }
 
 # turn that video into webm.
+# brew reinstall ffmpeg --with-libvpx
 webmify(){
 	ffmpeg -i $1 -vcodec libvpx -acodec libvorbis -isync -copyts -aq 80 -threads 3 -qmax 30 -y $2 $1.webm
 }

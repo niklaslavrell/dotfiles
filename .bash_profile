@@ -1,5 +1,9 @@
-# Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
+#
+# Loads the dotfiles ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
+# and initializes some nice dependencies
+#
+
 for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
 	[ -r "$file" ] && source "$file"
 done

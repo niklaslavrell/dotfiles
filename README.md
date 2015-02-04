@@ -1,6 +1,6 @@
 # Niklas dotfiles
 
-Forked from [paulirish](https://github.com/paulirish/dotfiles) and [mathiasbynens](https://github.com/mathiasbynens/dotfiles), thanks!
+My OSX dotfiles
 
 ## Installation
 
@@ -24,12 +24,12 @@ source sync.sh
 ./.osx
 ```
 
-#### Homebrew formulae
+#### brew, brew cask & npm
 
 ```bash
-./brew.sh
+source brew.sh && source brew-cask.sh && source npm.sh
 ```
 
-## Dotfiles syntax highlighting
+## Thanks
 
-Install [Dotfiles Syntax Highlighting](https://github.com/mattbanks/dotfiles-syntax-highlighting-st2) via [Sublime Text 2 Package Control](http://wbond.net/sublime_packages/package_control)
+Thanks to [paulirish](https://github.com/paulirish/dotfiles) and [mathiasbynens](https://github.com/mathiasbynens/dotfiles)!

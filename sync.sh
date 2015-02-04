@@ -1,3 +1,7 @@
+#
+# Pulls master and syncs the dotfiles to ~
+#
+
 #!/usr/bin/env bash
 
 cd "$(dirname "${BASH_SOURCE}")";
@@ -5,10 +9,9 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" \
-		--exclude "brew.sh" --exclude "brew-cask.sh" --exclude "npm.sh" \
-        --exclude "setup-a-new-machine.sh" --exclude "sync.sh" \
-        --exclude "README.md" --exclude "LICENSE-MIT.txt" -avh --no-perms . ~;
+	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "sync.sh" \
+		--exclude "brew.sh" --exclude "README.md" --exclude "LICENSE-MIT.txt" \
+        --exclude "brew-cask.sh" --exclude "setup-a-new-machine.sh" -avh --no-perms . ~;
 	source ~/.bash_profile;
 }
 

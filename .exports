@@ -1,7 +1,11 @@
-# Make vim the default editor
+#
+# Sets the environment variables
+#
+
+# Make Sublime the default editor
 export EDITOR="subl -w"
 # Don’t clear the screen after quitting a manual page
-#export MANPAGER="less -X"
+export MANPAGER="less -X"
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
