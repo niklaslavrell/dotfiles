@@ -1,19 +1,19 @@
 # Niklas dotfiles
 
-Forked from [paulirish](https://github.com/paulirish/dotfiles) and [mathiasbynens](https://github.com/mathiasbynens/dotfiles), big thanks!
+Forked from [paulirish](https://github.com/paulirish/dotfiles) and [mathiasbynens](https://github.com/mathiasbynens/dotfiles), thanks!
 
 ## Installation
 
 ### Bootstrap script
 
 ```bash
-git clone https://github.com/lalle/dotfiles.git && cd dotfiles && source bootstrap.sh
+git clone https://github.com/lalle/dotfiles.git && cd dotfiles && source sync.sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
 
 ```bash
-source bootstrap.sh
+source sync.sh
 ```
 
 ### For a new Mac
