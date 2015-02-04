@@ -2,7 +2,36 @@
 
 My OSX dotfiles
 
-## Installation
+## Overview of files
+
+#### shell environment
+* `.aliases`
+* `.bash_profile`
+* `.bash_prompt`
+* `.bashrc`
+* `.exports`
+* `.functions`
+* `.extra` - not included, explained above
+
+#### manual run
+* `setup-a-new-machine.sh` - random apps i need installed
+* `.osx` - run on a fresh osx setup
+* `brew.sh` & `brew-cask.sh` - homebrew initialization
+* `npm.sh`- npm initialization
+
+#### git, brah
+* `.git`
+* `.gitattributes`
+* `.gitconfig`
+* `.gitignore`
+
+* `.inputrc` - config for bash readline
+
+### private config
+
+Toss it into a file called `.extra` which you do not commit to this repo and just keep in your `~/`
+
+## Install
 
 ### Bootstrap script
 
@@ -10,13 +39,18 @@ My OSX dotfiles
 git clone https://github.com/lalle/dotfiles.git && cd dotfiles && source sync.sh
 ```
 
-To update, `cd` into your local `dotfiles` repository and then:
+To update, `cd` into your local `dotfiles` repository and then
 
 ```bash
 source sync.sh
 ```
-
 ### For a new Mac
+
+For a new machine setup
+
+```bash
+setup-a-new-machine.sh
+```
 
 #### OS X defaults
 
@@ -24,11 +58,6 @@ source sync.sh
 ./.osx
 ```
 
-#### brew, brew cask & npm
-
-```bash
-source brew.sh && source brew-cask.sh && source npm.sh
-```
 
 ## Thanks
 

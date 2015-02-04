@@ -2,14 +2,6 @@
 # Installs cool command-line tools using Homebrew
 #
 
-#!/usr/bin/env bash
-
-# Ask for the administrator password upfront.
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until `.osx` has finished.
-#while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 # Make sure we’re using the latest Homebrew.
 brew update
 
@@ -26,8 +18,6 @@ sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 brew install bash
 brew install bash-completion
 
-brew install tree
-
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
@@ -38,6 +28,7 @@ brew install homebrew/dupes/screen
 brew install homebrew/php/php55 --with-gmp
 
 # Developer tools and frameworks
+brew install tree
 brew install git
 brew install node
 brew install python

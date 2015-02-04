@@ -9,10 +9,15 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "sync.sh" \
-		--exclude "brew.sh" --exclude "README.md" --exclude "LICENSE-MIT.txt" \
-        --exclude "brew-cask.sh" --exclude "setup-a-new-machine.sh" -avh --no-perms . ~;
-	source ~/.bash_profile;
+	rsync --exclude ".git/" \
+		--exclude ".DS_Store" \
+		--exclude "README.md" \
+		--exclude "LICENSE-MIT.txt" \
+		--exclude "sync.sh" \
+		--exclude "brew.sh" \
+        --exclude "brew-cask.sh" \
+        --exclude "npm.sh" \
+        --exclude "setup-a-new-machine.sh" -av . ~
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
@@ -25,3 +30,4 @@ else
 	fi;
 fi;
 unset doIt;
+source ~/.bash_profile
