@@ -2,12 +2,8 @@
 # Installs some nice native apps
 #
 
-brew update
-
 # Install HomeBrew Cask
 brew install caskroom/cask/brew-cask
-
-brew upgrade brew-cask
 
 # daily
 brew cask install alfred
