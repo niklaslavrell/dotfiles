@@ -4,6 +4,7 @@
 
 # Install HomeBrew Cask
 brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
 
 # daily
 brew cask install alfred
@@ -15,7 +16,8 @@ brew cask install google-drive
 brew cask install iterm2
 brew cask install sublime-text
 brew cask install macdown
-brew cask install java
+#brew cask install java7
+#brew cask install android-studio
 
 # browsers
 brew cask install google-chrome
