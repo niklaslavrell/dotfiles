@@ -18,6 +18,8 @@ shopt -s nocaseglob
 
 # java_home
 export JAVA_HOME=$(/usr/libexec/java_home)
+# hot fix for android studio 1.0, remove when updated to 1.1
+# launchctl setenv STUDIO_JDK /Library/Java/JavaVirtualMachines/jdk1.7.0_76.jdk/
 
 ##
 ## Completion…
