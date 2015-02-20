@@ -18,6 +18,12 @@ brew cask install sublime-text
 brew cask install macdown
 #brew cask install java7
 #brew cask install android-studio
+#brew cask install rdm
+#brew cask install robomongo
+
+# chat
+#brew cask install slack
+#brew cask install hipchat
 
 # browsers
 brew cask install google-chrome
