@@ -21,6 +21,11 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 # hot fix for android studio 1.0, remove when updated to 1.1
 # launchctl setenv STUDIO_JDK /Library/Java/JavaVirtualMachines/jdk1.7.0_76.jdk/
 
+# android
+export ANDROID_HOME=/Users/niklaslavrell/Library/Android/sdk
+export PATH=$PATH:/Users/niklaslavrell/Library/Android/sdk/platform-tools/
+export PATH=$PATH:$ANDROID_HOME/tools/
+
 ##
 ## Completion…
 ##
