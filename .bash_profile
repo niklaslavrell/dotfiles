@@ -19,9 +19,9 @@ shopt -s nocaseglob
 # java home
 export JAVA_HOME=$(/usr/libexec/java_home)
 # android
-export ANDROID_HOME=/Users/niklaslavrell/Library/Android/sdk
-export PATH=$PATH:/Users/niklaslavrell/Library/Android/sdk/platform-tools/
-export PATH=$PATH:$ANDROID_HOME/tools/
+#export ANDROID_HOME=/Users/niklaslavrell/Library/Android/sdk
+#export PATH=$PATH:/Users/niklaslavrell/Library/Android/sdk/platform-tools/
+#export PATH=$PATH:$ANDROID_HOME/tools/
 
 # append history for each tab instead of overwriting.
 shopt -s histappend

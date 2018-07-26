@@ -49,7 +49,7 @@ source sync.sh
 For a new machine setup
 
 ```bash
-setup-a-new-machine.sh
+source setup-a-new-machine.sh
 ```
 
 #### OS X defaults

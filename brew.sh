@@ -33,8 +33,13 @@ brew install git
 brew install node
 brew install python
 brew install composer
-brew install gradle
-brew install ffmpeg
+#brew install gradle
+#brew install ffmpeg
+brew install mongodb
+brew install docker
+brew install docker-machine
+brew install docker-compose
+#brew install heroku
 
 # Remove outdated versions from the cellar.
 brew cleanup
