@@ -9,8 +9,8 @@
 # daily
 #brew cask install alfred
 #brew cask install dropbox
-#brew cask install google-drive
 brew cask install flux
+brew cask install google-backup-and-sync
 
 # dev
 brew cask install iterm2
