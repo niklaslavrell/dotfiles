@@ -144,3 +144,8 @@ gifify() {
 webmify(){
 	ffmpeg -i $1 -vcodec libvpx -acodec libvorbis -isync -copyts -aq 80 -threads 3 -qmax 30 -y $2 $1.webm
 }
+
+# ffmpeg all files in this folder
+ffmpeg-all-files() {
+	for i in *; do ffmpeg -i "$i" "${i%.*}.mp4"; done
+}
