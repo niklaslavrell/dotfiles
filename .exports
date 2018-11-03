@@ -3,7 +3,7 @@
 #
 
 # Make Atom the default editor
-export EDITOR="atom -w"
+export EDITOR="code -w"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
