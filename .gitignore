@@ -26,3 +26,6 @@ Temporary Items
 
 # Compiled Python files
 *.pyc
+
+# Extra files
+.extra
