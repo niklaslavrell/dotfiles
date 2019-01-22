@@ -78,7 +78,7 @@
 # http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
 
 [url "git@github.com:lalle/"]
-  insteadOf = "git://github.com/lalle/"
+  insteadOf = "git://github.com/niklaslavrell/"
 [help]
 	autocorrect = 1
 

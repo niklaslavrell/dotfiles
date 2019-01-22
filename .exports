@@ -2,7 +2,7 @@
 # Sets the environment variables
 #
 
-# Make Atom the default editor
+# Make Code the default editor
 export EDITOR="code -w"
 
 # Don’t clear the screen after quitting a manual page
