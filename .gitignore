@@ -1,6 +1,6 @@
-#
-# Global .gitignore settings
-#
+###############################################################################
+# Global .gitignore settings                                                  #
+###############################################################################
 
 # OSX
 ## Folder view configuration files
@@ -28,4 +28,4 @@ Temporary Items
 *.pyc
 
 # Extra files
-.extra
+.extra*

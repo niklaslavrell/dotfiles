@@ -1,78 +1,43 @@
 # Niklas dotfiles
 
-My OSX dotfiles
-
-## Overview of files
-
-#### shell environment
-
-- `.aliases`
-- `.bash_profile`
-- `.bash_prompt`
-- `.bashrc`
-- `.exports`
-- `.functions`
-- `.extra` - not included, explained above
-
-#### manual run
-
-- `setup-a-new-machine.sh` - random apps i need installed
-- `.osx` - run on a fresh osx setup
-- `brew.sh` & `brew-cask.sh` - homebrew initialization
-- `npm.sh`- npm initialization
-
-#### git, brah
-
-- `.git`
-- `.gitattributes`
-- `.gitconfig`
-- `.gitignore`
-
-- `.inputrc` - config for bash readline
-
-### private config
-
-Toss it into a file called `.extra` and do not commit to this repo. Something like this:
-
-```
-# Git credentials
-# Not in the repository, to prevent people from accidentally committing under my name
-GIT_AUTHOR_NAME="<name>"
-GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-git config --global user.name "$GIT_AUTHOR_NAME"
-GIT_AUTHOR_EMAIL="<email>"
-GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-git config --global user.email "$GIT_AUTHOR_EMAIL"
-```
+My MacOS dotfiles
 
 ## Install
 
-### Bootstrap script
+Install tools, apps and symlinks
 
-```bash
-git clone https://github.com/lalle/dotfiles.git && cd dotfiles && source sync.sh
+```zsh
+cd ~/code && git clone git@github.com:niklaslavrell/dotfiles.git && cd dotfiles && source install.sh
 ```
 
-To update, `cd` into your local `dotfiles` repository and then
+Set MacOS settings
 
-```bash
-source sync.sh
+```zsh
+./.macos
 ```
 
-### For a new Mac
+Add git credentials in a new file `.extra.gitconfig`, like:
 
-For a new machine setup
+```zsh
+# Git credentials
+[user]
+    name = Name
+    email = Email
 
-```bash
-source setup-a-new-machine.sh
+# Specific Git credentials for some folders
+[includeIf "gitdir:*/company/"]
+    path = ~/code/dotfiles/.extra.company.gitconfig
 ```
 
-#### OS X defaults
+## Files
 
-```bash
-./.osx
-```
+- `.gitconfig` - git configurations
+- `.gitignore` - global .gitignore settings
+- `.macos` - macos settings
+- `.zshrc` - zsh configurations
+- `.extra.gitcofig` - extra git credentials excluded from repo
+- `install.sh` - apps via homebrew and setup symlinks
 
 ## Thanks
 
-Thanks to [paulirish](https://github.com/paulirish/dotfiles) and [mathiasbynens](https://github.com/mathiasbynens/dotfiles)!
+Thanks to [paulirish](https://github.com/paulirish/dotfiles), [mathiasbynens](https://github.com/mathiasbynens/dotfiles) and [AntonNiklasson](https://github.com/AntonNiklasson/dotfiles) for inspiration.
