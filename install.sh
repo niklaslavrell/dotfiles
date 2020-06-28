@@ -64,6 +64,16 @@ brew cask install notion
 # brew cask install toggl
 
 ###############################################################################
+# Install tools from Yarn                                                     #
+###############################################################################
+
+yarn global add create-react-app
+yarn global add emoj
+yarn global add firebase-tools
+yarn global add gatsby-cli
+yarn global add netlify-cli
+
+###############################################################################
 # Install software from the Mac App Store                                     #
 ###############################################################################
 
