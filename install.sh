@@ -14,7 +14,8 @@ brew install yarn
 brew install mas
 brew install lastpass-cli
 # brew install tree
-# brew install git
+brew install git
+brew install git-lfs
 # brew install node
 # brew install ffmpeg
 # brew install mongodb
