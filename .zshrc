@@ -195,6 +195,11 @@ function gitexport(){
 	git archive master | tar -x -C "$1"
 }
 
+function gitexportmain(){
+	mkdir -p "$1"
+	git archive main | tar -x -C "$1"
+}
+
 # whois a domain or a URL
 function whois() {
 	local domain=$(echo "$1" | awk -F/ '{print $3}') # get domain from URL
