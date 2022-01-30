@@ -15,6 +15,7 @@ brew install mas
 brew install git
 brew install git-lfs
 brew install ffmpeg
+brew install gh
 
 # Remove outdated versions from the cellar.
 brew cleanup
@@ -32,6 +33,7 @@ brew install --cask slack
 brew install --cask google-chrome
 brew install --cask spotify
 brew install --cask notion
+brew install --cask zoom
 
 ###############################################################################
 # Install tools from Yarn                                                     #
