@@ -9,7 +9,6 @@ brew update
 brew upgrade
 
 # Developer tools and frameworks
-brew install n
 brew install yarn
 brew install mas
 brew install git
@@ -34,23 +33,28 @@ brew install --cask google-chrome
 brew install --cask spotify
 brew install --cask notion
 brew install --cask zoom
+brew install --cask messenger
+brew install --cask todoist
+
+###############################################################################
+# Install NVM
+###############################################################################
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 ###############################################################################
 # Install tools from Yarn                                                     #
 ###############################################################################
 
-yarn global add create-react-app
 yarn global add firebase-tools
-yarn global add gatsby-cli
 yarn global add netlify-cli
+yarn global add surge
 
 ###############################################################################
 # Install software from the Mac App Store                                     #
 ###############################################################################
 
-mas lucky Xcode
-mas lucky Messenger
-mas lucky Todoist
+mas lucky Gifski
 
 ###############################################################################
 # Install Oh My Zsh                                                           #
