@@ -54,7 +54,7 @@ yarn global add surge
 # Install software from the Mac App Store                                     #
 ###############################################################################
 
-mas lucky Gifski
+mas lucky "Gifski Convert videos to GIFs"
 
 ###############################################################################
 # Install Oh My Zsh                                                           #
