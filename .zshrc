@@ -133,6 +133,9 @@ alias .....="cd ../../../.."
 # i <3 u cask
 alias cask='brew cask'
 
+# pn for pnpm
+alias pn=pnpm
+
 # List all files colorized in long format
 alias l="ls -l ${colorflag}"
 
