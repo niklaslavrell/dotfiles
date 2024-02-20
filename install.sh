@@ -15,6 +15,7 @@ brew install git
 brew install git-lfs
 brew install ffmpeg
 brew install gh
+brew install fzf
 
 # Remove outdated versions from the cellar.
 brew cleanup
