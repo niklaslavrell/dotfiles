@@ -252,4 +252,5 @@ ffmpeg-all-files() {
 
 # fnm
 export PATH="$HOME/Library/Application Support/fnm:$PATH"
+export FNM_COREPACK_ENABLED="true"
 eval "$(fnm env --use-on-cd)"
