@@ -16,6 +16,7 @@ brew install git-lfs
 brew install ffmpeg
 brew install gh
 brew install fzf
+brew install fnm
 
 # Remove outdated versions from the cellar.
 brew cleanup
@@ -36,12 +37,6 @@ brew install --cask notion
 brew install --cask zoom
 brew install --cask messenger
 brew install --cask todoist
-
-###############################################################################
-# Install NVM
-###############################################################################
-
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 ###############################################################################
 # Install tools from Yarn                                                     #
