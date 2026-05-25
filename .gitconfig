@@ -14,6 +14,13 @@
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
+	# List branches based on recent commits: https://stackoverflow.com/a/44529712
+	recent = !git for-each-ref --sort=committerdate refs/heads --format='%(authordate:short) %(color:red)%(objectname:short) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))'
+	recent-remote = !git for-each-ref --sort=committerdate refs/heads refs/remotes --format='%(authordate:short) %(color:red)%(objectname:short) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset)) %(authorname)'
+
+	# Interactive checkout
+	cof = !git checkout $(git branch --sort=-committerdate --format='%(authordate:short) %(refname:short) (%(committerdate:relative))' | fzf --height=25% --reverse | awk '{print $2}')
+
 	# Some nice Swedish git commannds from https://github.com/bjorne/git-pa-svenska
 	ryck = pull
 	tryck = push
@@ -70,3 +77,6 @@
 
 [commit]
 	template = ~/code/dotfiles/.git-commit-template.txt
+
+[rebase]
+    updateRefs = true

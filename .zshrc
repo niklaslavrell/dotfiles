@@ -160,6 +160,21 @@ alias la="ls -la | awk '
 # GIT STUFF
 alias g='git'
 
+alias lg='lazygit'
+
+# Interactive checkout - can't get the colors to work with fzf, it seems to strip them out
+alias gcof="git branch --sort=-committerdate --format='%(authordate:short) %(refname:short) (%(committerdate:relative))' | fzf --height=25% --reverse | awk '{print \$2}' | xargs git checkout"
+
+alias gh-prs='gh pr list --author @me --json title,number,additions,deletions,url --template '\''{{range .}}`(+{{.additions}}/-{{.deletions}})` {{.title}} [#{{.number}}]({{.url}}){{"\n"}}{{end}}'\'
+
+alias pr-meta="gh pr view --json title,number,additions,deletions,url --template '\`(+{{.additions}}/-{{.deletions}})\` {{.title}} [#{{.number}}]({{.url}})'"
+
+function pr-meta() {
+  gh pr view "$1" --json title,number,additions,deletions,url --template "\`(+{{.additions}}/-{{.deletions}})\` {{.title}} [#{{.number}}]({{.url}})";
+}
+
+alias pr-meta-and-copy="pr-meta | pbcopy"
+
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
 
