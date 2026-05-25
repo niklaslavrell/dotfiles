@@ -17,6 +17,7 @@ brew install ffmpeg
 brew install gh
 brew install fzf
 brew install fnm
+brew install direnv
 
 # Remove outdated versions from the cellar.
 brew cleanup
@@ -25,17 +26,25 @@ brew cleanup
 # Installs some nice native apps with Homebrew Cask                           #
 ###############################################################################
 
-brew install --cask google-drive
-brew install --cask dropbox
+brew install --cask raycast
 brew install --cask iterm2
+brew install --cask claude
+brew install --cask claude-code
 brew install --cask visual-studio-code
-brew install --cask figma
-brew install --cask slack
+brew install --cask cursor
+brew install --cask docker
+brew install --cask docker-desktop
+brew install --cask tableplus
 brew install --cask google-chrome
+brew install --cask arc
+brew install --cask slack
+brew install --cask figma
+brew install --cask google-drive
+brew install --cask obsidian
+brew install --cask linear
 brew install --cask spotify
 brew install --cask notion
-brew install --cask zoom
-brew install --cask messenger
+brew install --cask notion-calendar
 brew install --cask todoist
 
 ###############################################################################
