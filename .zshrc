@@ -114,7 +114,7 @@ unsetopt share_history
 ###############################################################################
 
 # Make Code the default editor
-export EDITOR="code -w"
+export EDITOR="cursor -w"
 
 # Make n install to home to avoid sudo
 export N_PREFIX=$HOME/.n
