@@ -67,20 +67,27 @@ ZSH_THEME="fwalch"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+export FZF_DEFAULT_OPTS='--ansi --color=fg:#d0d0d0,bg:#1e1e1e,hl:#ffb86c,prompt:#50fa7b,pointer:#ff79c6,marker:#8be9fd'
 export FZF_BASE=/opt/homebrew/bin/fzf
+
+# Show full command in a preview pane when searching history (Ctrl+R); toggle with ?
+export FZF_CTRL_R_OPTS='--preview "echo {}" --preview-window down:3:wrap --bind "?:toggle-preview"'
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git yarn z fzf)
+plugins=(git yarn z fzf direnv)
 
 source $ZSH/oh-my-zsh.sh
 
 unsetopt inc_append_history
 unsetopt share_history
+
+# Keep only the most recent occurrence of each command in history
+setopt HIST_IGNORE_ALL_DUPS
 
 # User configuration
 

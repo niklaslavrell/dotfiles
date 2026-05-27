@@ -18,6 +18,7 @@ brew install gh
 brew install fzf
 brew install fnm
 brew install direnv
+brew install ripgrep
 
 # Remove outdated versions from the cellar.
 brew cleanup
