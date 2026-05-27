@@ -13,6 +13,7 @@ brew install yarn
 brew install mas
 brew install git
 brew install git-lfs
+brew install lazygit
 brew install ffmpeg
 brew install gh
 brew install fzf
