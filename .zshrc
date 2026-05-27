@@ -49,7 +49,7 @@ export FNM_COREPACK_ENABLED="true"
 eval "$(fnm env --use-on-cd)"
 
 # pnpm
-export PNPM_HOME="/Users/niklaslavrell/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
 # gh dash
