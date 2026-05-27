@@ -30,6 +30,9 @@ Temporary Items
 # Extra files
 .extra*
 
+# Machine-local secrets and overrides, not tracked
+.zshrc.local
+
 # VS code
 .vscode
 

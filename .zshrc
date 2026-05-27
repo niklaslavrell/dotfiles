@@ -197,3 +197,8 @@ ffmpeg-all-files() {
 	for i in *; do ffmpeg -i "$i" "${i%.*}.mp4"; done
 }
 
+###############################################################################
+# Machine-local secrets live in ~/.zshrc.local, not tracked in git            #
+###############################################################################
+
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

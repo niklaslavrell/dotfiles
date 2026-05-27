@@ -70,6 +70,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 # Symlink the files to ~
 ln -is ~/code/dotfiles/.zshrc ~/.zshrc
+ln -is ~/code/dotfiles/.zshrc.local ~/.zshrc.local
 ln -is ~/code/dotfiles/.gitignore ~/.gitignore
 ln -is ~/code/dotfiles/.gitconfig ~/.gitconfig
 
