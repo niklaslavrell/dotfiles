@@ -77,4 +77,7 @@ ln -is ~/code/dotfiles/.gitconfig ~/.gitconfig
 mkdir -p ~/.claude
 ln -is ~/code/dotfiles/CLAUDE.md ~/.claude/CLAUDE.md
 
+mkdir -p "$HOME/Library/Application Support/lazygit"
+ln -is ~/code/dotfiles/lazygit-config.yml "$HOME/Library/Application Support/lazygit/config.yml"
+
 source ~/.zshrc
