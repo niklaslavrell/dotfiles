@@ -1,0 +1,21 @@
+prSections:
+  - title: My Open Pull Requests
+    filters: is:open author:@me
+  - title: All My Pull Requests
+    filters: author:@me
+  - title: Needs My Review
+    filters: is:open review-requested:@me
+  - title: Involved
+    filters: is:open involves:@me -author:@me
+defaults:
+  preview:
+    open: true
+    width: 100
+repoPaths:
+  :owner/:repo: ~/code/:owner/:repo
+keybindings:
+  prs:
+    - key: "ctrl+l"
+      name: "Copy nice PR link"
+      command: >-
+        gh pr view --repo {{.RepoName}} {{.PrNumber}} --json title,number,additions,deletions,url --template '{{`(+{{.additions}}/-{{.deletions}}) {{.title}} [#{{.number}}]({{.url}})`}}' | sed -e 's/(/`\(/' -e 's/)/&`/' | pbcopy

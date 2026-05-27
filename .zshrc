@@ -53,7 +53,7 @@ export PNPM_HOME="/Users/niklaslavrell/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
 # gh dash
-export GH_DASH_CONFIG="$HOME/Library/Application Support/gh-dash/config.yml"
+export GH_DASH_CONFIG="$HOME/code/dotfiles/gh-dash-config.yml"
 
 ###############################################################################
 # Sets useful aliases to the shell promt                                      #
