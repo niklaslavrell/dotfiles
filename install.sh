@@ -74,4 +74,7 @@ ln -is ~/code/dotfiles/.zshrc.local ~/.zshrc.local
 ln -is ~/code/dotfiles/.gitignore ~/.gitignore
 ln -is ~/code/dotfiles/.gitconfig ~/.gitconfig
 
+mkdir -p ~/.claude
+ln -is ~/code/dotfiles/CLAUDE.md ~/.claude/CLAUDE.md
+
 source ~/.zshrc
