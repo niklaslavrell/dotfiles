@@ -43,6 +43,18 @@ setopt HIST_IGNORE_ALL_DUPS
 # Default editor
 export EDITOR="cursor -w"
 
+# fnm
+export PATH="$HOME/Library/Application Support/fnm:$PATH"
+export FNM_COREPACK_ENABLED="true"
+eval "$(fnm env --use-on-cd)"
+
+# pnpm
+export PNPM_HOME="/Users/niklaslavrell/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
+# gh dash
+export GH_DASH_CONFIG="$HOME/Library/Application Support/gh-dash/config.yml"
+
 ###############################################################################
 # Sets useful aliases to the shell promt                                      #
 ###############################################################################
@@ -185,7 +197,3 @@ ffmpeg-all-files() {
 	for i in *; do ffmpeg -i "$i" "${i%.*}.mp4"; done
 }
 
-# fnm
-export PATH="$HOME/Library/Application Support/fnm:$PATH"
-export FNM_COREPACK_ENABLED="true"
-eval "$(fnm env --use-on-cd)"
