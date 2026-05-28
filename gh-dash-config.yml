@@ -4,7 +4,7 @@ prSections:
   - title: All My Pull Requests
     filters: author:@me
   - title: Needs My Review
-    filters: is:open review-requested:@me
+    filters: is:open user-review-requested:@me
   - title: Involved
     filters: is:open involves:@me -author:@me
 defaults:
