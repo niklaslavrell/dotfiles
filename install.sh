@@ -20,6 +20,7 @@ brew install fzf
 brew install fnm
 brew install direnv
 brew install ripgrep
+brew install google-cloud-sdk
 
 # Remove outdated versions from the cellar.
 brew cleanup
@@ -34,11 +35,11 @@ brew install --cask claude
 brew install --cask claude-code
 brew install --cask visual-studio-code
 brew install --cask cursor
-brew install --cask docker
 brew install --cask docker-desktop
 brew install --cask tableplus
 brew install --cask google-chrome
 brew install --cask arc
+brew install --cask firefox
 brew install --cask slack
 brew install --cask figma
 brew install --cask google-drive
@@ -48,6 +49,14 @@ brew install --cask spotify
 brew install --cask notion
 brew install --cask notion-calendar
 brew install --cask todoist
+brew install --cask tuple
+brew install --cask font-meslo-lg-nerd-font
+
+###############################################################################
+# Github CLI extensions                                                       #
+###############################################################################
+
+gh extension install dlvhdr/gh-dash
 
 ###############################################################################
 # Install tools from Yarn                                                     #
@@ -70,15 +79,15 @@ mas lucky "Gifski Convert videos to GIFs"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Symlink the files to ~
-ln -is ~/code/dotfiles/.zshrc ~/.zshrc
-ln -is ~/code/dotfiles/.zshrc.local ~/.zshrc.local
-ln -is ~/code/dotfiles/.gitignore ~/.gitignore
-ln -is ~/code/dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/code/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/code/dotfiles/.zshrc.local ~/.zshrc.local
+ln -sf ~/code/dotfiles/.gitignore ~/.gitignore
+ln -sf ~/code/dotfiles/.gitconfig ~/.gitconfig
 
 mkdir -p ~/.claude
-ln -is ~/code/dotfiles/CLAUDE.md ~/.claude/CLAUDE.md
+ln -sf ~/code/dotfiles/CLAUDE.md ~/.claude/CLAUDE.md
 
 mkdir -p "$HOME/Library/Application Support/lazygit"
-ln -is ~/code/dotfiles/lazygit-config.yml "$HOME/Library/Application Support/lazygit/config.yml"
+ln -sf ~/code/dotfiles/lazygit-config.yml "$HOME/Library/Application Support/lazygit/config.yml"
 
 source ~/.zshrc
