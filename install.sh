@@ -90,4 +90,6 @@ ln -sf ~/code/dotfiles/CLAUDE.md ~/.claude/CLAUDE.md
 mkdir -p "$HOME/Library/Application Support/lazygit"
 ln -sf ~/code/dotfiles/lazygit-config.yml "$HOME/Library/Application Support/lazygit/config.yml"
 
+mkdir -p ~/Screenshots
+
 source ~/.zshrc
