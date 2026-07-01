@@ -200,6 +200,74 @@ ffmpeg-all-files() {
 	for i in *; do ffmpeg -i "$i" "${i%.*}.mp4"; done
 }
 
+# Create a git worktree at <repo>.worktrees/<feature> alongside the main repo,
+# and open it in a 4-pane iTerm tab: lazygit, claude, and two empty shells.
+function wt() {
+  local feature="$1"
+  if [[ -z "$feature" ]]; then
+    echo "usage: wt <feature-name>" >&2
+    return 1
+  fi
+
+  local repo_root
+  repo_root=$(git rev-parse --show-toplevel 2>/dev/null) || {
+    echo "wt: not inside a git repo" >&2
+    return 1
+  }
+
+  local repo_name=${repo_root:t}
+  local org_dir=${repo_root:h}
+  local wt_parent="$org_dir/${repo_name}.worktrees"
+  local wt_path="$wt_parent/$feature"
+  local branch="niklas/$feature"
+
+  if [[ -e "$wt_path" ]]; then
+    echo "wt: $wt_path already exists" >&2
+    return 1
+  fi
+
+  mkdir -p "$wt_parent"
+
+  if git -C "$repo_root" show-ref --verify --quiet "refs/heads/$branch"; then
+    git -C "$repo_root" worktree add "$wt_path" "$branch" || return 1
+  else
+    git -C "$repo_root" worktree add -b "$branch" "$wt_path" || return 1
+  fi
+
+  # Layout: lazygit 25% | claude 50% | (top / bottom) 25%
+  osascript <<APPLESCRIPT
+tell application "iTerm"
+  activate
+  tell current window
+    set originalBounds to bounds
+    set newTab to (create tab with default profile)
+    set p1 to current session of newTab
+    tell p1
+      set p2 to (split vertically with default profile)
+    end tell
+    tell p2
+      set p3 to (split vertically with default profile)
+    end tell
+    tell p3
+      set p4 to (split horizontally with default profile)
+    end tell
+    set totalCols to (columns of p1) + (columns of p2) + (columns of p3)
+    set columns of p1 to (totalCols div 4)
+    set columns of p3 to (totalCols div 6)
+    set bounds to originalBounds
+    tell p1 to set name to "$feature"
+    tell p2 to set name to "$feature"
+    tell p3 to set name to "$feature"
+    tell p4 to set name to "$feature"
+    tell p1 to write text "cd '$wt_path' && lazygit"
+    tell p2 to write text "cd '$wt_path' && claude"
+    tell p3 to write text "cd '$wt_path'"
+    tell p4 to write text "cd '$wt_path'"
+  end tell
+end tell
+APPLESCRIPT
+}
+
 ###############################################################################
 # Machine-local secrets live in ~/.zshrc.local, not tracked in git            #
 ###############################################################################
