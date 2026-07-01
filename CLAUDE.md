@@ -10,17 +10,17 @@
 
 # Pull requests
 
-- Description: same shape as a commit body — one or two sentences of *why*, then a link to the issue. No section headers (no "Summary", no "Test plan"), no restating the diff, no checklists.
-  - Multiple distinct changes in one PR: list them as bullets, one sentence each focused on *why*. No section header above the list — the bullets are the body.
+- Description: in one or two sentences, lead with *what* changed, then close with what it solved (or why). For bug fixes, the bug-as-subject + root-cause-then-fix pattern below still wins. No section headers (no "Summary", no "Test plan"), no restating the diff, no checklists.
+  - Multiple distinct changes in one PR: list them as bullets. Each bullet leads with *what* changed in one short sentence, optionally followed by the *why*. No section header above the list — the bullets are the body.
 - Links: use markdown format `[label](url)` (e.g. `[PROJ-4048](https://linear.app/example/issue/PROJ-4048)`), not bare URLs.
 - Linear tickets: reference as `Closes [PROJ-4048](https://linear.app/example/issue/PROJ-4048)`, not `See: …`.
 - Worked examples of the full shape:
   - Trivial fix — subject alone, no body needed:
     > `[Editor] fix padding`
-  - One-sentence why + follow-up reference:
+  - One sentence of what + a sentence of why, then a follow-up reference:
     > `Hide summary toggle from non-owners`
     >
-    > Fix so that the summary toggle is only visible to owners of the document. This is reasonable since the feature gives you access to generate AI summaries of the document. Follow up from #1234.
+    > Gate the summary toggle on document ownership. The toggle triggers AI summary generation, so it shouldn't be exposed to non-owners. Follow up from #1234.
   - Bug-as-subject + a couple of sentences explaining root cause and the fix shape (no headers, no test plan):
     > `appendItem drops new entries when list is a single value`
     >
