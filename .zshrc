@@ -55,6 +55,9 @@ export PATH="$PNPM_HOME:$PATH"
 # gh dash
 export GH_DASH_CONFIG="$HOME/code/dotfiles/gh-dash-config.yml"
 
+# libpg postgres cli
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
 ###############################################################################
 # Sets useful aliases to the shell promt                                      #
 ###############################################################################

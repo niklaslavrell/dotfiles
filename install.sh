@@ -20,6 +20,7 @@ brew install fzf
 brew install fnm
 brew install direnv
 brew install ripgrep
+brew install libpq
 brew install google-cloud-sdk
 
 # Remove outdated versions from the cellar.
