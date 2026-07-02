@@ -91,6 +91,9 @@ ln -sf ~/code/dotfiles/CLAUDE.md ~/.claude/CLAUDE.md
 mkdir -p "$HOME/Library/Application Support/lazygit"
 ln -sf ~/code/dotfiles/lazygit-config.yml "$HOME/Library/Application Support/lazygit/config.yml"
 
+mkdir -p "$HOME/Library/Application Support/iTerm2/DynamicProfiles"
+ln -sf ~/code/dotfiles/iterm2-config.json "$HOME/Library/Application Support/iTerm2/DynamicProfiles/dotfiles.json"
+
 mkdir -p ~/Screenshots
 
 source ~/.zshrc

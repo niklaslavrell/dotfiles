@@ -36,6 +36,7 @@ Add git credentials in a new file `.extra.gitconfig`, like:
 - `.macos` - macos settings
 - `.zshrc` - zsh configurations
 - `.extra.gitcofig` - extra git credentials excluded from repo
+- `iterm2-config.json` - iTerm2 profile settings
 - `install.sh` - apps via homebrew and setup symlinks
 
 ## Thanks

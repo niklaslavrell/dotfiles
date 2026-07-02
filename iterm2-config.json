@@ -1,0 +1,13 @@
+{
+  "Profiles" : [
+    {
+      "Name" : "Dotfiles",
+      "Guid" : "dotfiles",
+      "Rewritable" : false,
+      "Normal Font" : "MesloLGLNFM-Regular 12",
+      "Cursor Type" : 1,
+      "Blinking Cursor" : false,
+      "Use Separate Colors for Light and Dark Mode" : true
+    }
+  ]
+}
