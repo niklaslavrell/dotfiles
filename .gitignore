@@ -38,3 +38,6 @@ Temporary Items
 
 # IntelliJ
 .idea
+
+# Vim
+*.sw?
