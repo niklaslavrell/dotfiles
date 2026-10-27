@@ -15,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="fwalch"
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
-export FZF_DEFAULT_OPTS='--ansi --color=fg:#d0d0d0,bg:#1e1e1e,hl:#ffb86c,prompt:#50fa7b,pointer:#ff79c6,marker:#8be9fd'
+export FZF_DEFAULT_OPTS='--ansi --color=fg:#dcdcdc,bg:#15191f,hl:#ece100,prompt:#58e790,pointer:#e17ee1,marker:#60fdff'
 export FZF_BASE=/opt/homebrew/bin/fzf
 
 # Show full command in a preview pane when searching history (Ctrl+R); toggle with ?
