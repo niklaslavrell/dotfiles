@@ -77,7 +77,7 @@ mas lucky "Gifski Convert videos to GIFs"
 # Install Oh My Zsh                                                           #
 ###############################################################################
 
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Symlink the files to ~
 ln -sf ~/code/dotfiles/.zshrc ~/.zshrc
